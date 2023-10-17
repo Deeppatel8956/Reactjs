@@ -1,0 +1,60 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "name": "hello",
+      "eamil": "hello@123gmail.com",
+      "phone": 5615498461,
+      "country": "Usa"
+    },
+    {
+      "id": 2,
+      "name": "demo",
+      "eamil": "demo@123gmail.com",
+      "phone": 56154984610,
+      "country": "India"
+    },
+    {
+      "id": 3,
+      "name": "Monstar",
+      "eamil": "Monstar@123gmail.com",
+      "phone": 5615498423,
+      "country": "UK"
+    },
+    {
+      "id": 4,
+      "name": "Johan",
+      "eamil": "hello@123gmail.com",
+      "phone": 5615498478,
+      "country": "France"
+    },
+    {
+      "name": "seerd",
+      "email": "dp8945099@gmail.com",
+      "phone": "",
+      "country": "jk",
+      "id": 5
+    },
+    {
+      "name": "kenkne",
+      "email": "dp945099@gmail.com",
+      "phone": "",
+      "country": "France",
+      "id": 6
+    },
+    {
+      "name": "monstar",
+      "email": "cv161561@gmail.com",
+      "phone": "561545454545",
+      "country": "Maxico",
+      "id": 7
+    },
+    {
+      "name": "dark",
+      "email": "dark@gmail.com",
+      "phone": "15156162121261",
+      "country": "Korea",
+      "id": 8
+    }
+  ]
+}
