@@ -1,0 +1,61 @@
+
+
+.section{
+    
+    height: 600px;
+    width: 500px;
+    border: 1px solid white;
+    margin: 3rem 38%;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.main{
+    /* margin-top: 1rem; */
+    text-align: center;
+}
+.main input{
+    width: 25rem;
+    padding: 1rem;
+}
+h1{
+    margin: 30px;
+    font-size: 5rem;
+    color: white;
+}
+.email{
+    margin-right: 22rem;
+    font-size: 2rem;
+    color: azure;
+}
+.pass{
+    color: azure;
+    margin-right: 14.9rem;
+    font-size: 2rem;
+}
+.Span{
+    margin-top: 1rem;
+    margin-right: 14.9rem;
+    font-size: 1.3rem;
+}
+.Span a{
+    text-decoration: none;
+    color:burlywood;
+}
+.Btn{
+    margin: 1rem;
+    font-size: 2rem;
+    width: 27rem;
+    padding: 0.4rem;
+    background-color: aqua;
+    color: blueviolet;
+}
+.boat{
+    width: 27rem;
+    padding: 0.4rem;
+    font-size: 2rem;
+    gap: 2px;
+    background-color: aliceblue;
+    
+}
