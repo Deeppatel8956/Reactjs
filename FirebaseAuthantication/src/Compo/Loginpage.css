@@ -1,0 +1,72 @@
+body{
+    /* background-color: rgb(78, 76, 79); */
+    color: black;
+}
+.continue{  
+    
+    text-align: center;
+    color: black;
+    height: 500px;
+    width: 480px;
+    border: 1px solid white;
+    margin: 8rem 34%;
+    background-color: white;
+    border-radius: 10px;
+    /* box-shadow: 10px 5px 5px red; */
+}
+h1{
+    margin-top: 4rem;
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+/* label */
+
+/* E-mail */
+.omg{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 37.9rem;
+}
+
+/* Password */
+.bun{
+    font-size: 20px;
+    margin-right: 34rem;
+    font-weight: bold;
+
+}
+
+/* input */
+.continue input{
+    width: 45rem;
+    padding: 2rem;
+    border-radius: 10px;
+    border-color: antiquewhite;
+}
+
+.continue input::placeholder{
+    font-size: 17px;
+}
+
+/* button */
+.logo{
+    margin-top: 20px;
+    width: 45rem;
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+.three{
+   font-size: medium;
+   font-weight: bold;
+}
+.three a{
+    text-decoration: none;
+}

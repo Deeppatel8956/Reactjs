@@ -1,0 +1,77 @@
+body{
+    background-color: blueviolet;
+    /* text-align: center; */
+}
+.main{
+    color:black;
+    text-align: center;
+    height: 580px;
+    width: 480px;
+    border: 1px solid white;
+    margin: 8rem 34%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* h1 */
+.nto{
+    margin-top: 4rem;
+    font-size: 4rem;
+    padding: 2rem;
+    /* margin: 10rem; */
+}
+
+
+
+
+.main input{
+    width: 45rem;
+    padding: 2rem;
+    border-radius: 10px;
+    /* border: none; */
+    border-color:beige;
+}
+.main input::placeholder{
+    font-size: 17px;
+}
+
+/* label */
+.name{
+    /* margin-top: 5rem; */
+    margin-right: 38.5rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.email{
+    font-weight: bold;
+    margin-right: 38.2rem;
+    font-size: 20px;
+}
+.pass{
+    font-weight: bold;
+    margin-right: 34.2rem;
+    font-size: 20px;
+    
+}
+
+/* button */
+.btnn{
+    margin-top: 20px;
+    width: 45rem;
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+
+/* span */
+.one{
+    font-size: medium;
+   font-weight: bold;
+}
+.one a{
+    text-decoration: none;
+}
