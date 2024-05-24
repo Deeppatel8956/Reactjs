@@ -1,0 +1,9 @@
+.empty-wrap{
+    display: flex;
+    justify-content: center;
+}
+.empty-wrap img{
+    max-width: 250px;
+    width: 100%;
+    color: black;
+}

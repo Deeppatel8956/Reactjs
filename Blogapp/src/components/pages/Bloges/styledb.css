@@ -1,0 +1,10 @@
+.blogList-wrap{
+    margin-top: 2.05rem;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 0 1rem; */
+    gap: 4rem;
+}

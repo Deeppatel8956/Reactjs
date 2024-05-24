@@ -1,0 +1,26 @@
+.search-wrap{
+    text-align: center;
+    margin-top: 1rem;
+    
+}
+.search-wrap input{
+    box-sizing: border-box;
+    /* display: flex; */
+    width: 35%;
+    padding: 1rem;
+    background-color: rgb(189, 243, 243);
+    border: none;
+    outline: none;
+    font-size: large;
+    border-radius: 10px;
+}
+.search-wrap button{
+    padding: 1rem;
+    margin: 0 0.2rem;
+    font-size: medium;
+    background-color: rgba(42, 42, 225, 0.786);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+}

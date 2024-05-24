@@ -1,0 +1,21 @@
+.header-warp{
+    text-align: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.header-warp h2{
+    color: rgba(43, 86, 187, 0.94);
+}
+
+.header-warp h1 {
+    /* font-size: xx-large; */
+    color: rgba(43, 86, 187, 0.94);
+    margin: 0.2rem;
+}
+
+.header-warp p{
+    font-size: x-large;
+    margin: 0 1rem;
+    padding: 0 1rem;
+}
