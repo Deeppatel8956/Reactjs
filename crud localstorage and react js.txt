@@ -1,0 +1,208 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ItemList from './components/ItemList';
+import CreateItem from './components/CreateItem';
+import EditItem from './components/EditItem';
+import ItemDetail from './components/ItemDetail';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<ItemList />} />
+        <Route path="/create" element={<CreateItem />} />
+        <Route path="/edit/:id" element={<EditItem />} />
+        <Route path="/item/:id" element={<ItemDetail />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+
+
+2 Part
+
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+const ItemList = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const savedItems = JSON.parse(localStorage.getItem('items')) || [];
+    setItems(savedItems);
+  }, []);
+
+  const handleDelete = (id) => {
+    const updatedItems = items.filter(item => item.id !== id);
+    setItems(updatedItems);
+    localStorage.setItem('items', JSON.stringify(updatedItems));
+  };
+
+  return (
+    <div>
+      <h1>Item List</h1>
+      <Link to="/create">Create New Item</Link>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            <Link to={`/item/${item.id}`}>{item.name}</Link>
+            <Link to={`/edit/${item.id}`}>Edit</Link>
+            <button onClick={() => handleDelete(item.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ItemList;
+
+
+3rd Part
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+const ItemList = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const savedItems = JSON.parse(localStorage.getItem('items')) || [];
+    setItems(savedItems);
+  }, []);
+
+  const handleDelete = (id) => {
+    const updatedItems = items.filter(item => item.id !== id);
+    setItems(updatedItems);
+    localStorage.setItem('items', JSON.stringify(updatedItems));
+  };
+
+  return (
+    <div>
+      <h1>Item List</h1>
+      <Link to="/create">Create New Item</Link>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            <Link to={`/item/${item.id}`}>{item.name}</Link>
+            <Link to={`/edit/${item.id}`}>Edit</Link>
+            <button onClick={() => handleDelete(item.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ItemList;
+
+
+4 Part
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const CreateItem = () => {
+  const [name, setName] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newItem = { id: Date.now(), name };
+    const savedItems = JSON.parse(localStorage.getItem('items')) || [];
+    savedItems.push(newItem);
+    localStorage.setItem('items', JSON.stringify(savedItems));
+    navigate('/');
+  };
+
+  return (
+    <div>
+      <h1>Create New Item</h1>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          value={name} 
+          onChange={(e) => setName(e.target.value)} 
+          placeholder="Item Name"
+        />
+        <button type="submit">Create</button>
+      </form>
+    </div>
+  );
+};
+
+export default CreateItem;
+
+
+5 Part
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+
+const EditItem = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [name, setName] = useState('');
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('items')) || [];
+    const item = items.find(item => item.id === parseInt(id, 10));
+    if (item) setName(item.name);
+  }, [id]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const items = JSON.parse(localStorage.getItem('items')) || [];
+    const updatedItems = items.map(item => 
+      item.id === parseInt(id, 10) ? { ...item, name } : item
+    );
+    localStorage.setItem('items', JSON.stringify(updatedItems));
+    navigate('/');
+  };
+
+  return (
+    <div>
+      <h1>Edit Item</h1>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          value={name} 
+          onChange={(e) => setName(e.target.value)} 
+          placeholder="Item Name"
+        />
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  );
+};
+
+export default EditItem;
+
+
+6 Part
+
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
+const ItemDetail = () => {
+  const { id } = useParams();
+  const [item, setItem] = useState(null);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('items')) || [];
+    const foundItem = items.find(item => item.id === parseInt(id, 10));
+    setItem(foundItem);
+  }, [id]);
+
+  if (!item) return <div>Item not found</div>;
+
+  return (
+    <div>
+      <h1>Item Detail</h1>
+      <p>ID: {item.id}</p>
+      <p>Name: {item.name}</p>
+    </div>
+  );
+};
+
+export default ItemDetail;
