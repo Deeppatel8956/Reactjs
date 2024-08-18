@@ -1,0 +1,32 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Alexd",
+      "city": "Ahemdabad",
+      "salary": 10000,
+      "Mobile": 1234567
+    },
+    {
+      "id": 2,
+      "name": "Harsh",
+      "city": "Gandhinagar",
+      "salary": 100000,
+      "Mobile": 12345678
+    },
+    {
+      "name": "gngkn",
+      "city": "Gandhinagar",
+      "salary": "200000",
+      "mobile": "21215648984",
+      "id": 4
+    },
+    {
+      "name": "dog",
+      "city": "surat",
+      "salary": "10000",
+      "mobile": "21215648984",
+      "id": 5
+    }
+  ]
+}
