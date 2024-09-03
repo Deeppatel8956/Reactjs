@@ -1,0 +1,32 @@
+import React,{useState} from "react";
+import "./style.css";
+
+export default function App() {
+  const [items,setItems]=useState([])
+  const [inva,setInva]=useState('')
+
+  const additem=()=>{
+    if(inva.trim()){
+    setItems([...items,inva.trim()])
+    setInva('')
+  }
+  }
+
+  const removeitem=(index)=>{
+    setItems(items.filter((_,i)=>i!==index))
+  }
+  return (
+    <div>
+          <h2>Dynamic List</h2>
+        <input type="text" value={inva} onChange={(e)=> setInva(e.target.value)} placeholder='Enter Item' />
+        <button onClick={additem}>Add Item</button>
+
+        {items.map((item,index)=>
+              <ul key={index}>
+                <li>{item}</li>
+                <button onClick={()=>removeitem(index)}></button>
+              </ul>
+        )}
+    </div>
+  );
+}
