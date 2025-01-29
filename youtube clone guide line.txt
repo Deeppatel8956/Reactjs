@@ -1,0 +1,6 @@
+
+1. React.js
+2. React Router DOM
+3. JSON Server
+4. Material Icons
+5. React Player
